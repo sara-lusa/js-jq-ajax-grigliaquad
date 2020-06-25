@@ -6,16 +6,17 @@ $(document).ready(function() {
 
   $('button').click(function() {
 
-    // HANDLEBARS
+    // VERSIONE CON CLONE E FOR
+    for (var i = 0; i < 36; i++) {
+      var quadratoGenerato = $('.template .quadrato').clone();
+      $('.griglia').append(quadratoGenerato);
+    }
+
+    // VERSIONE CON HANDLEBARS
     // var source = $('#template').text();
     // var template = Handlebars.compile(source);
     // var html = template();
     // $('.griglia').append(html);
-
-    var quadratoGenerato = 
-    for (var i = 0; i < 36; i++) {
-
-    }
 
   });
 
