@@ -13,12 +13,19 @@ $(document).ready(function() {
         url: "https://flynn.boolean.careers/exercises/api/random/int",
         method: 'GET',
         success: function(data) {
-          alert('Ha funzionato!');
+          $(elementoSelezionato).removeClass('yellow', 'green');
+
+          if (data.response <= 5) {
+            $(elementoSelezionato).addClass('yellow');
+          } else if(data.response > 5) {
+            $(elementoSelezionato).addClass('green');
+          }
+
+          $(elementoSelezionato).text(data.response);
+
         },
         error: function(richiesta, stato, errori) {
-          console.log(richiesta);
-          console.log(stato);
-          console.log(errori);
+          alert('Errore: ' + errori);
         }
       }
     );
