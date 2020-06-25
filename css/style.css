@@ -52,6 +52,7 @@ button {
   background-color: pink;
   font-size: 25px;
   font-weight: bold;
+  border: 1px solid black;
 }
 
 .template {

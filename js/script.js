@@ -4,21 +4,30 @@
 // Il numero ottenuto appare al centro del quadrato
 $(document).ready(function() {
 
-  $('button').click(function() {
+  // VERSIONE CON HANDLEBARS
+  for (var i = 0; i < 36; i++) {
+    var source = $('#template').text();
+    var template = Handlebars.compile(source);
+    var html = template();
+    $('.griglia').append(html);
+  }
 
-    // VERSIONE CON CLONE E FOR
-    for (var i = 0; i < 36; i++) {
-      var quadratoGenerato = $('.template .quadrato').clone();
-      $('.griglia').append(quadratoGenerato);
-    }
-
-    // VERSIONE CON HANDLEBARS
-    // var source = $('#template').text();
-    // var template = Handlebars.compile(source);
-    // var html = template();
-    // $('.griglia').append(html);
-
-  });
+  //// VERSIONE AGGIUNTIVA
+  // $('button').click(function() {
+  //
+  //   // VERSIONE CON CLONE E FOR
+  //   for (var i = 0; i < 36; i++) {
+  //     var quadratoGenerato = $('.template .quadrato').clone();
+  //     $('.griglia').append(quadratoGenerato);
+  //   }
+  //
+  //   // VERSIONE CON HANDLEBARS
+  //   // var source = $('#template').text();
+  //   // var template = Handlebars.compile(source);
+  //   // var html = template();
+  //   // $('.griglia').append(html);
+  //
+  // });
 
   $(document).on('click', '.quadrato', function() {
 
