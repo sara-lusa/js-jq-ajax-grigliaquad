@@ -4,6 +4,25 @@
 // Il numero ottenuto appare al centro del quadrato
 $(document).ready(function() {
 
+  $('.quadrato').click(function() {
 
+    var elementoSelezionato = this;
+
+    $.ajax(
+      {
+        url: "https://flynn.boolean.careers/exercises/api/random/int",
+        method: 'GET',
+        success: function(data) {
+          alert('Ha funzionato!');
+        },
+        error: function(richiesta, stato, errori) {
+          console.log(richiesta);
+          console.log(stato);
+          console.log(errori);
+        }
+      }
+    );
+
+  })
 
 });
