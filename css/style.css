@@ -18,6 +18,16 @@ body {
   align-items: center;
 }
 
+h1 {
+  background-color: pink;
+  border: 2px solid black;
+  text-transform: uppercase;
+  height: 50px;
+  line-height: 50px;
+  width: 500px;
+  text-align: center;
+}
+
 .griglia {
   background-color: white;
   height: 600px;
@@ -25,7 +35,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .quadrato {
@@ -37,6 +47,7 @@ body {
   align-items: center;
   font-size: 25px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .green {
