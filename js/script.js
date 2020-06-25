@@ -4,7 +4,22 @@
 // Il numero ottenuto appare al centro del quadrato
 $(document).ready(function() {
 
-  $('.quadrato').click(function() {
+  $('button').click(function() {
+
+    // HANDLEBARS
+    // var source = $('#template').text();
+    // var template = Handlebars.compile(source);
+    // var html = template();
+    // $('.griglia').append(html);
+
+    var quadratoGenerato = 
+    for (var i = 0; i < 36; i++) {
+
+    }
+
+  });
+
+  $(document).on('click', '.quadrato', function() {
 
     var elementoSelezionato = this;
 
